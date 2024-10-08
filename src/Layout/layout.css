@@ -1,0 +1,14 @@
+@import url('https://fonts.cdnfonts.com/css/adegoke');
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+*{
+    margin: 0;
+    font-family: "Manrope", sans-serif;
+}
+
+.Header-left h1{
+    color: #014cd6;
+    font-family: "Playfair Display", serif;
+}

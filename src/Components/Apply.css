@@ -1,0 +1,10 @@
+@import url('https://fonts.cdnfonts.com/css/adegoke');
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+.apply {
+    background-image: url('../Assets//bg-image.jpg');
+    object-fit: cover;
+}

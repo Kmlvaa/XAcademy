@@ -1,0 +1,15 @@
+@import url('https://fonts.cdnfonts.com/css/adegoke');
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+* {
+    box-sizing: border-box;
+    /* font-family: 'TT Severs Trial', sans-serif; */
+}
+
+.lower-right p {
+    font-family: "Manrope", sans-serif;
+}
+
