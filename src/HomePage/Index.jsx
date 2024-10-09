@@ -7,11 +7,13 @@ import facebook from '../Assets/fb.png'
 import { ArrowRight } from 'react-bootstrap-icons';
 import { NavLink } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react'
+import Html from '../Assets/html.png'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/free-mode'
 import { Autoplay, FreeMode, Pagination } from 'swiper/modules'
-import { Modal, ModalCloseButton, ModalContent, ModalFooter, ModalOverlay, useDisclosure, ModalBody, ModalHeader, Button } from '@chakra-ui/react'
+import { Modal, ModalCloseButton, ModalContent, ModalOverlay, useDisclosure, ModalBody } from '@chakra-ui/react'
+import course from '../Courses/course'
 
 function Index() {
 
@@ -59,17 +61,31 @@ function Index() {
                             <p className='text-skyBlue font-semibold group-hover:text-white' onClick={onOpen}>Marketinq</p>
                             <p className='text-gray500 text-sm group-hover:text-gray700'>Gələcək burada</p>
                         </div>
-                        <Modal onClose={onClose} isOpen={isOpen} isCentered>
+                        <Modal onClose={onClose}
+                            isOpen={isOpen} isCentered
+                            scrollBehavior='inside'
+                            size={'5xl'}
+                        >
                             <ModalOverlay />
                             <ModalContent>
-                                <ModalHeader>Modal Title</ModalHeader>
-                                <ModalCloseButton />
                                 <ModalBody>
-                                    jniferuiewfijewf
+                                    <div className='flex flex-row p-3 gap-10'>
+                                        <div className='flex flex-col w-px500 py-10'>
+                                            <h1 className='text-4xl font-bold mb-14'>Frontend Developer</h1>
+                                            <p className='text-xl font-medium'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab eveniet doloribus dolorem debitis eaque deserunt, architecto dolores perspiciatis sed nemo aperiam, numquam quidem inventore nulla sequi, praesentium facilis officia sit?</p>
+                                            <button className='text-logoBlue border-1 w-px200 h-12 py-2 pl-4 pr-2 mt-14 cursor-pointer text-base rounded-full border-logoBlue flex flex-row items-center justify-between'>
+                                                <p>Kursa bax</p>
+                                                <div className='w-9 h-9 bg-logoBlue border-0 rounded-full flex items-center justify-center'>
+                                                    <ArrowRight color='orange' width={28} height={28} />
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div className='PopUpBg w-px400 h-px400 rounded-3xl  absolute right-6'>
+                                            <img src={Html} />
+                                            <ModalCloseButton className='relative !rounded-full !text-white !bg-logoBlue' />
+                                        </div>
+                                    </div>
                                 </ModalBody>
-                                <ModalFooter>
-                                    <Button onClick={onClose}>Close</Button>
-                                </ModalFooter>
                             </ModalContent>
                         </Modal>
                     </div>

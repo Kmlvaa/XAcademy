@@ -22,6 +22,7 @@ module.exports = {
         black: "rgb(0 0 0)",
         CustomGray: "#7f96a8",
         TeacherBG: "#dae1e7",
+        ContactGray: "#e8ebed",
       },
       width: {
         px100: "100px",
@@ -63,6 +64,10 @@ module.exports = {
       backgroundImage: {
         custom1: "linear-gradient(90deg, rgba(2,0,.6,1) -10%, rgba(9,9,121,1) 40%, rgba(0,212,255,1) 120%)",
       },
+      maxWidth: {
+        px1200: "1200px"
+
+      }
     },
   },
   plugins: [],

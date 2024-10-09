@@ -13,3 +13,6 @@
     font-family: "Manrope", sans-serif;
 }
 
+.PopUpBg {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 33%, rgba(35, 35, 182, 1) 87%);
+}

@@ -3,7 +3,7 @@ import React from 'react'
 export default function Index() {
     return (
         <>
-            <div className='flex flex-row items-center justify-between mt-52 mx-28'>
+            <div className='flex flex-row items-center justify-between mt-52 px-28 max-[1200px]:px-0 max-[1200px]:flex-col'>
                 <div className='text-2xl'>
                     <div className='mb-5'>
                         <p>Fuad İbrahimbəyov 9B</p>
@@ -24,6 +24,21 @@ export default function Index() {
                 </div>
             </div>
             <div className='w-auto h-0.5 mx-28 my-28 bg-gray-300'></div>
+            <div className='mx-28'>
+                <div className='w-80 m-auto text-center'>
+                    <p className='text-3xl font-semibold text-logoBlue'>Bizimlə Əlaqə</p>
+                </div>
+                <div className='flex flex-col gap-4 mt-14'>
+                    <div className='flex flex-row items-center justify-between w-px1000 m-auto'>
+                        <input placeholder='Ad-soyad*' className='w-px300 border-1 border-gray-500 p-3 rounded-lg bg-ContactGray placeholder:text-logoBlue'/>
+                        <input placeholder='E-mail*' className='w-px300 border-1  border-gray-500 p-3 rounded-lg bg-ContactGray placeholder:text-logoBlue'/>
+                        <input placeholder='Mövzu*' className='w-px300 border-1  border-gray-500 p-3 rounded-lg bg-ContactGray placeholder:text-logoBlue'/>
+                    </div>
+                    <div className='flex flex-row items-center justify-between w-px1000 m-auto'>
+                        <input placeholder='Mövzu*' className='border-1 border-gray-500 p-3 rounded-lg bg-ContactGray w-px1000 h-px300 text-left placeholder:text-logoBlue'/>
+                    </div>
+                </div>
+            </div>
         </>
     )
 }
