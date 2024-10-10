@@ -1,7 +1,7 @@
 import React from 'react'
 import './Apply.css'
 
-export default function Apply() {
+function Apply() {
     return (
         <div className='apply w-full h-80 my-24 text-skyBlue-200 flex flex-col justify-center px-28 max-[650px]:px-20 max-[570px]:px-28 max-[440px]:px-10'>
             <div className='mb-14 max-[570px]:mb-7'>
@@ -16,3 +16,4 @@ export default function Apply() {
         </div>
     )
 }
+export default Apply;

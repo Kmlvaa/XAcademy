@@ -1,5 +1,5 @@
 import './welcome.css';
-import Photo from '../Assets/course.webp'
+import Photo from '../../Assets/course.webp'
 import { NavLink } from 'react-router-dom';
 
 function Welcome() {

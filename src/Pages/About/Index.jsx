@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import AboutImage from '../Assets/haqqimizda.jpeg'
-import Check from '../Assets/check.png'
+import AboutImage from '../../Assets/haqqimizda.jpeg'
+import Check from '../../Assets/check.png'
 import './Index.css'
-import Girl from '../Assets/girl.jpeg'
+import Girl from '../../Assets/girl.jpeg'
 
 export default function Index() {
 

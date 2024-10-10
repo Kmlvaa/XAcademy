@@ -1,13 +1,13 @@
 import { NavLink, Outlet } from "react-router-dom";
 import './layout.css'
-import Logo from '../Assets/AladdinLogo.png'
-import Insta from '../Assets/insta.jpg'
-import Facebook from '../Assets/facebook.png'
-import Linkedin from '../Assets/linkedin.webp'
-import Youtube from '../Assets/youtube-logo.svg'
+import Logo from '../../Assets/AladdinLogo.png'
+import Insta from '../../Assets/insta.jpg'
+import Facebook from '../../Assets/facebook.png'
+import Linkedin from '../../Assets/linkedin.webp'
+import Youtube from '../../Assets/youtube-logo.svg'
 import { ButtonGroup, Dropdown, DropdownButton } from "react-bootstrap";
 import { useState } from "react";
-import Apply from "../Components/Apply";
+import Apply from "../../Components/Apply/Apply";
 
 function Layout() {
 
@@ -37,8 +37,7 @@ function Layout() {
                 </div>
             </div>
             <Outlet />
-            <Apply />
-            <div className="Layout-Footer flex flex-col justify-center w-full px-28 max-[1200px]:px-5">
+            <div className="Layout-Footer flex flex-col justify-center w-full px-28 mt-40 max-[1200px]:px-5">
                 <div className="Logos flex flex-row justify-between w-full">
                     <div className="Header-left flex flex-row items-center font-semibold">
                         <img src={Logo} width={50} height={50}/>

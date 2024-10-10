@@ -1,10 +1,11 @@
 import React from 'react'
 import { ArrowRight } from 'react-bootstrap-icons'
 import { NavLink } from 'react-router-dom'
-import Instagram from '../Assets/in.png'
-import Youtube from '../Assets/you.png'
-import Linkedin from '../Assets/lk.png'
-import Facebook from '../Assets/fb.png'
+import Instagram from '../../Assets/in.png'
+import Youtube from '../../Assets/you.png'
+import Linkedin from '../../Assets/lk.png'
+import Facebook from '../../Assets/fb.png'
+import Apply from '../../Components/Apply/Apply'
 
 export default function index() {
   return (
@@ -19,7 +20,7 @@ export default function index() {
               <div className='border-2 bg-blue-500 h-px300 rounded-md max-[1400px]:h-px270'></div>
               <div className='flex flex-col justify-start'>
                 <div className='pt-7 pb-2'>
-                  <NavLink to='/layout/UX_UI'><p className='text-blue-800 font-bold text-2xl cursor-pointer'>{item.FullName}</p></NavLink>
+                  <NavLink to={`/layout/teacher/${item.ID}`}><p className='text-blue-800 font-bold text-2xl cursor-pointer hover:underline'>{item.FullName}</p></NavLink>
                 </div>
                 <div className='mb-4'>
                   <p>{item.Profession}</p>
@@ -31,13 +32,14 @@ export default function index() {
                     <img src={Youtube} width={40} height={40} className="hover:cursor-pointer" />
                     <img src={Facebook} width={40} height={40} className="hover:cursor-pointer" />
                   </div>
-                  <p><NavLink to='/layout/frontend' className="flex flex-row items-center hover:text-blue-700"><span className='mr-1'>Daha çox </span> <ArrowRight /></NavLink></p>
+                  <p><NavLink to={`/layout/teacher/${item.ID}`} className="flex flex-row items-center hover:text-blue-700"><span className='mr-1'>Daha çox </span> <ArrowRight /></NavLink></p>
                 </div>
               </div>
             </div>
           );
         })}
       </div>
+      <Apply />
     </>
   )
 }
@@ -50,12 +52,12 @@ const Data = [
   },
   {
     ID: "2",
-    FullName: "Ismət Qədirov",
+    FullName: "Aygün Sirvanova",
     Profession: "Qrafik Dizayner",
   },
   {
     ID: "3",
-    FullName: "Ismət Qədirov",
+    FullName: "Mələk Hacıməmmədova",
     Profession: "Qrafik Dizayner",
   },
   {

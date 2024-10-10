@@ -5,6 +5,6 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
 .apply {
-    background-image: url('../Assets/bg-image.jpg');
+    background-image: url('../../Assets/bg-image.jpg');
     object-fit: cover;
 }

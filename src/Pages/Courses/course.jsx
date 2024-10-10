@@ -1,6 +1,7 @@
 import React from 'react'
 import { ArrowRight } from 'react-bootstrap-icons'
 import { NavLink } from 'react-router-dom'
+import Apply from '../../Components/Apply/Apply';
 
 export default function course() {
   return (
@@ -15,17 +16,18 @@ export default function course() {
               <div className='border-2 bg-blue-600 h-px300 rounded-md max-[1400px]:h-px270'></div>
               <div className='flex flex-col justify-start'>
                 <div className='pt-7 pb-3'>
-                  <NavLink to='/layout/UX_UI'><p className='text-blue-700 font-bold text-2xl cursor-pointer'>{item.Course}</p></NavLink>
+                 <p className='text-blue-700 font-bold text-2xl cursor-pointer hover:underline'>{item.Course}</p>
                 </div>
                 <div className='flex flex-row justify-between items-center text-sm text-gray-500'>
-                  <p>Təlimçi: {item.Teacher}</p>
-                  <p><NavLink to='/layout/frontend' className="flex flex-row items-center hover:text-blue-700"><span className='mr-1'>Daha çox </span> <ArrowRight /></NavLink></p>
+                  <NavLink to={`/layout/teacher/${item.TeacherID}`}><p className='hover:text-orange-700'>Təlimçi: {item.Teacher}</p></NavLink>
+                  <p><NavLink to={`/layout/course/${item.ID}`} className="flex flex-row items-center hover:text-blue-700"><span className='mr-1'>Daha çox </span> <ArrowRight /></NavLink></p>
                 </div>
               </div>
             </div>
           );
         })}
       </div>
+      <Apply />
     </>
   )
 }
@@ -33,48 +35,57 @@ export default function course() {
 const Data = [
   {
     ID: "1",
-    Course: "UX/UI dizayn təlimi",
+    Course: "Frontend",
     Teacher: "Aygün Şirvanova",
+    TeacherID: 1,
   },
   {
     ID: "2",
     Course: "UX/UI dizayn təlimi",
     Teacher: "Aygün Şirvanova",
+    TeacherID: 2,
   },
   {
     ID: "3",
-    Course: "UX/UI dizayn təlimi",
+    Course: "Marketing",
     Teacher: "Aygün Şirvanova",
+    TeacherID: 3,
   },
   {
     ID: "4",
-    Course: "UX/UI dizayn təlimi",
+    Course: "IELTS",
     Teacher: "Aygün Şirvanova",
+    TeacherID: 4,
   },
   {
     ID: "5",
-    Course: "UX/UI dizayn təlimi",
+    Course: "Backend",
     Teacher: "Aygün Şirvanova",
+    TeacherID: 5,
   },
   {
     ID: "6",
     Course: "UX/UI dizayn təlimi",
     Teacher: "Aygün Şirvanova",
+    TeacherID: 1,
   },
   {
     ID: "7",
     Course: "UX/UI dizayn təlimi",
     Teacher: "Aygün Şirvanova",
+    TeacherID: 1,
   },
   {
     ID: "8",
     Course: "UX/UI dizayn təlimi",
     Teacher: "Aygün Şirvanova",
+    TeacherID: 1,
   },
   {
     ID: "9",
     Course: "UX/UI dizayn təlimi",
     Teacher: "Aygün Şirvanova",
+    TeacherID: 1,
   },
 
 ]
