@@ -8,6 +8,7 @@ import Teachers from '../Pages/Teachers/index'
 import About from '../Pages/About/Index'
 import Contact from '../Pages/Contact/Index'
 import Teaher1 from '../Pages/TeacherInfo/Index'
+import Login from '../Pages/Account/Login/Login'
 
 function index() {
     return (
@@ -22,6 +23,8 @@ function index() {
 
                 <Route path='/layout/teacher/:id' element={<Teaher1 />} />
                 <Route path="/layout/course/:id" element={<CourseInfo />}/>
+
+                <Route path="/layout/account/login" element={<Login />}/>
             </Route>
         </Routes>
     );

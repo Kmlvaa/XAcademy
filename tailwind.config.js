@@ -33,6 +33,7 @@ module.exports = {
         px300: "300px",
         px350: "350px",
         px400: "400px",
+        px450: "450px",
         px500: "500px",
         px600: "600px",
         px700: "700px",
