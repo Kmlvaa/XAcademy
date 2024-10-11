@@ -8,7 +8,11 @@ import Teachers from '../Pages/Teachers/index'
 import About from '../Pages/About/Index'
 import Contact from '../Pages/Contact/Index'
 import Teaher1 from '../Pages/TeacherInfo/Index'
+import LoginLayout from '../Pages/Account/LoginLayout/index'
+import Password from '../Pages/Account/PasswordChange/Index'
 import Login from '../Pages/Account/Login/Login'
+import Register from '../Pages/Account/Register/Index'
+import Karyera from '../Pages/Carier/Index'
 
 function index() {
     return (
@@ -16,15 +20,21 @@ function index() {
             <Route path="/" index element={<Welcome />} />
             <Route path="/layout" element={<Layout />}>
                 <Route path="/layout/home" element={<Home />} />
-                <Route path="/layout/course" element={<Courses />}/>
-                <Route path="/layout/teachers" element={<Teachers />}/>
-                <Route path="/layout/about" element={<About />}/>
-                <Route path="/layout/contact" element={< Contact/>}/>
+                <Route path="/layout/course" element={<Courses />} />
+                <Route path="/layout/teachers" element={<Teachers />} />
+                <Route path="/layout/about" element={<About />} />
+                <Route path="/layout/contact" element={< Contact />} />
 
                 <Route path='/layout/teacher/:id' element={<Teaher1 />} />
-                <Route path="/layout/course/:id" element={<CourseInfo />}/>
+                <Route path="/layout/course/:id" element={<CourseInfo />} />
 
-                <Route path="/layout/account/login" element={<Login />}/>
+                <Route path="/layout/account/layout" element={<LoginLayout />}>
+                    <Route path="/layout/account/layout/login" element={<Login />} />
+                    <Route path="/layout/account/layout/passowordChange" element={<Password />} />
+                </Route>
+                <Route path="/layout/account/register" element={<Register />}/>
+
+                <Route path="/layout/karyera" element={<Karyera />}/>
             </Route>
         </Routes>
     );
