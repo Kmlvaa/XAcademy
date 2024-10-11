@@ -13,6 +13,7 @@ import Password from '../Pages/Account/PasswordChange/Index'
 import Login from '../Pages/Account/Login/Login'
 import Register from '../Pages/Account/Register/Index'
 import Karyera from '../Pages/Carier/Index'
+import Partners from '../Pages/Partners/Index'
 
 function index() {
     return (
@@ -35,6 +36,7 @@ function index() {
                 <Route path="/layout/account/register" element={<Register />}/>
 
                 <Route path="/layout/karyera" element={<Karyera />}/>
+                <Route path="/layout/partners" element={<Partners />}/>
             </Route>
         </Routes>
     );
