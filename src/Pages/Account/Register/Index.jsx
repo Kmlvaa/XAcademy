@@ -11,7 +11,7 @@ import {
 } from '@chakra-ui/react'
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons'
 import { NavLink } from 'react-router-dom'
-import Image from '../../../Assets/register.png'
+import Image from '../../../Assets/Add User-pana 1.svg'
 import chatbot from '../../../Assets/chatboticon.png'
 
 export default function Index() {
@@ -22,7 +22,7 @@ export default function Index() {
     return (
         <>
             <div className='mx-28 mt-40 flex flex-row justify-between items-center'>
-                <div className='ml-10'>
+                <div >
                     <img src={Image} className='w-px500 h-px500' />
                 </div>
                 <div className='shadow-custom2 p-10 w-px450 h-auto rounded-2xl'>

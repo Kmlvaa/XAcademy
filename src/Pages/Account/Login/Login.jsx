@@ -21,7 +21,7 @@ export default function Login() {
 
     return (
         <>
-            <div className='shadow-custom2 p-10 w-px450 h-auto rounded-2xl'>
+            <div className='shadow-custom2 p-10 w-px450 h-auto rounded-2xl mr-4'>
                 <div className='text-center'>
                     <h1 className='text-xl font-semibold'>Daxil ol</h1>
                     <div>
