@@ -6,7 +6,7 @@ import { Outlet } from 'react-router-dom'
 export default function Index() {
     return (
         <>
-            <div className='mx-28 mt-40 max-[1200px]:!mx-0 max-lg:my-96'>
+            <div className='mx-28 mt-20 max-[1200px]:!mx-0 max-lg:my-72'>
                 <div className='flex flex-row justify-between items-center max-lg:justify-center'>
                     <div className='max-lg:!hidden'>
                         <img src={Image} className='w-px400 h-px400 max-[850px]:!hidden' />

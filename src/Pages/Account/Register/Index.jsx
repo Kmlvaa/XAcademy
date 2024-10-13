@@ -22,7 +22,7 @@ export default function Index() {
 
     return (
         <>
-            <div className='mx-28 mt-40 flex flex-row justify-between items-center max-lg:my-96 max-lg:justify-center'>
+            <div className='mx-28 mt-12 flex flex-row justify-between items-center max-lg:my-80 max-lg:justify-center'>
                 <div className='max-lg:hidden'>
                     <img src={Image} className='w-px500 h-px500' />
                 </div>

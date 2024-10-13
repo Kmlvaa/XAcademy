@@ -3,12 +3,16 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-*{
+* {
     margin: 0;
     font-family: "Manrope", sans-serif;
 }
 
-.Header-left h1{
+.Header-left h1 {
     color: #014cd6;
     font-family: "Playfair Display", serif;
+}
+
+.sideBar{
+    animation: 3s linear ease-out;
 }
