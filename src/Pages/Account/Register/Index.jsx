@@ -13,6 +13,7 @@ import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons'
 import { NavLink } from 'react-router-dom'
 import Image from '../../../Assets/Add User-pana 1.svg'
 import chatbot from '../../../Assets/chatboticon.png'
+import respImage from '../../../Assets/Group 74.svg'
 
 export default function Index() {
 
@@ -21,30 +22,33 @@ export default function Index() {
 
     return (
         <>
-            <div className='mx-28 mt-40 flex flex-row justify-between items-center'>
-                <div >
+            <div className='mx-28 mt-40 flex flex-row justify-between items-center max-lg:my-96 max-lg:justify-center'>
+                <div className='max-lg:hidden'>
                     <img src={Image} className='w-px500 h-px500' />
                 </div>
-                <div className='shadow-custom2 p-10 w-px450 h-auto rounded-2xl'>
+                <div className='max-lg:flex hidden relative -left-64 -top-56 z-10 max-sm:-left-48 max-sm:-top-60'>
+                    <img src={respImage} className='max-sm:w-px100' />
+                </div>
+                <div className='shadow-custom2 p-10 w-px450 h-auto rounded-2xl max-lg:absolute max-lg:mt-20'>
                     <div className='text-center'>
-                        <h1 className='text-xl font-semibold'>Daxil ol</h1>
+                        <h1 className='text-2xl font-semibold mb-10'>Qeydiyyatdan keç</h1>
                         <div>
                             <FormControl className='mb-2'>
                                 <FormLabel>E-mail</FormLabel>
-                                <Input type='email' placeholder='E-mail daxil edin' className='p-4 placeholder:text-sm' />
+                                <Input type='email' placeholder='E-mail daxil edin' className='p-4 placeholder:text-sm !border-gray-400 border-2 focus:!border-logoBlue' />
                             </FormControl>
                             <FormControl className='mb-2'>
                                 <FormLabel>İstifadəçi adı</FormLabel>
-                                <Input type='text' placeholder='Adı daxil edin' className='p-4 placeholder:text-sm' />
+                                <Input type='text' placeholder='Adı daxil edin' className='p-4 placeholder:text-sm !border-gray-400 border-2 focus:!border-logoBlue' />
                             </FormControl>
                             <FormControl className='mb-2'>
                                 <FormLabel>Telefon nömrəniz</FormLabel>
-                                <Input type='text' placeholder='Nömrə daxil edin' className='p-4 placeholder:text-sm' autoComplete='false' />
+                                <Input type='text' placeholder='Nömrə daxil edin' className='p-4 placeholder:text-sm !border-gray-400 border-2 focus:!border-logoBlue' autoComplete='false' />
                             </FormControl>
                             <FormControl className='mt-2'>
                                 <FormLabel>Şifrə</FormLabel>
                                 <InputGroup>
-                                    <Input type={show ? 'text' : 'password'} placeholder='Şifrəni daxil edin' className='p-4 placeholder:text-sm' autoComplete='false'/>
+                                    <Input type={show ? 'text' : 'password'} placeholder='Şifrəni daxil edin' className='p-4 placeholder:text-sm !border-gray-400 border-2 focus:!border-logoBlue' autoComplete='false' />
                                     <InputRightElement width='4.5rem' className='my-1 '>
                                         <Button h='1.75rem' size='sm' onClick={handleClick}>
                                             {show ? <ViewIcon /> : <ViewOffIcon />}
@@ -59,8 +63,8 @@ export default function Index() {
                     </div>
                 </div>
             </div>
-            <div className='absolute right-0 top-96'>
-                <img src={chatbot} width={100} height={100} className='cursor-pointer'/>
+            <div className='absolute right-0 top-96 max-lg:hidden'>
+                <img src={chatbot} width={100} height={100} className='cursor-pointer' />
             </div>
         </>
     )

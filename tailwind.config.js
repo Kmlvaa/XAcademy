@@ -23,6 +23,7 @@ module.exports = {
         CustomGray: "#7f96a8",
         TeacherBG: "#dae1e7",
         ContactGray: "#e8ebed",
+        LoginFormGray: "#ededed",
       },
       width: {
         px100: "100px",
