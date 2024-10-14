@@ -3,7 +3,7 @@ import React from 'react'
 export default function Index() {
     return (
         <>
-            <div className='flex flex-row items-center justify-between mt-52 px-28 max-[1200px]:px-0 max-[1200px]:flex-col'>
+            <div className='flex flex-row items-center justify-between mt-20 px-28 max-[1200px]:px-0 max-[1200px]:flex-col'>
                 <div className='text-2xl'>
                     <div className='mb-5'>
                         <p>Fuad İbrahimbəyov 9B</p>

@@ -10,8 +10,8 @@ export default function Index() {
 
     return (
         <>
-            <div className='mt-48 px-28 flex flex-row items-center justify-between'>
-                <div className='Left w-[550px] '>
+            <div className='mt-20 px-28 flex flex-row items-center justify-between max-lg:!flex-col max-lg:gap-10'>
+                <div className='Left w-auto '>
                     <h1 className='text-6xl font-bold mb-4 leading-snug'>X Academy ilə Məqsədlərinə Çat</h1>
                     <p className='text-CustomGray font-semibold mb-10'>Hədəfləri itirdin, cəfəngiyat, şayiə, söhbətlər. Yoldaş, boş-boş vaxt itirmək, heç bir şey etməmək. Yaxşı bir söhbət etmək üçün əla fürsət, atışma, zarafat.</p>
                     <div className='ml-8'>
@@ -48,7 +48,7 @@ export default function Index() {
             </div>
             <div className='px-24 pt-40 text-center'>
                 <h1 className='font-bold text-2xl mb-14'>Böyük şirkətlər tərəfindən etibar edilir</h1>
-                <div className='grid grid-cols-6 items-center justify-items-center mb-14 gap-20 max-[1200px]:grid-cols-4'>
+                <div className='grid grid-cols-6 items-center justify-items-center mb-14 gap-20 max-lg:grid-cols-4 max-md:grid-cols-3 max-sm:grid-cols-2'>
                     {Companies.map((cm) => {
                         return (
                             <img src={cm.image} className='w-20 h-20 rounded-full' />

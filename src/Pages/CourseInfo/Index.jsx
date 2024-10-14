@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Photo from '../../Assets/html.png'
+import Photo from '../../Assets/pngegg 1.png'
 import icon1 from '../../Assets/front-icon.png'
 import icon2 from '../../Assets/icon2.png'
 import icon from '../../Assets/icon.svg'
@@ -19,23 +19,23 @@ export default function Index() {
     )
 
     return (
-        <>
-            <div className='flex flex-row items-center justify-between px-28 mt-40'>
+        <div className='mx-28 mt-20 max-lg:mx-5'>
+            <div className='flex flex-row items-center justify-between rounded-3xl max-md:!flex-col max-md:bg-gray-200 max-md:text-center '>
                 <div className='w-2/3'>
-                    <div className='mb-14'>
-                        <p className='text-blue-600 text-7xl'>{details?.[0].title}</p>
+                    <div className='mb-14 mt-3'>
+                        <p className='text-blue-600 text-7xl max-md:text-4xl'>{details?.[0].title}</p>
                     </div>
-                    <div className='mb-14 text-xl max-w-2xl'>
+                    <div className='mb-14 text-xl max-w-2xl max-md:text-md max-md:w-auto'>
                         <p>{details?.[0].review}</p>
                     </div>
                     <button className='bg-blue-700 text-white px-5 py-2 border-0 rounded-md'>Indi təlimə qoşul</button>
                 </div>
                 <div>
-                    <img src={details?.[0].image} width={500} height={500} />
+                    <img src={Photo} width={500} height={500} className='max-md:w-px400 max-md:h-px300 mt-5'/>
                 </div>
             </div>
-            <div className='w-auto h-0.5 mx-28 my-28 bg-gray-300'></div>
-            <div className='flex flex-col items-start px-28'>
+            <div className='w-auto h-0.5 my-28 bg-gray-300'></div>
+            <div className='flex flex-col items-start'>
                 <div className='mb-10 flex flex-row items-center'>
                     <img src={icon1} width={50} height={50} />
                     <p className='text-3xl font-bold ml-3'>Frontend Developer kimdir?</p>
@@ -58,10 +58,10 @@ export default function Index() {
                     </div>
                 </div>
             </div>
-            <div className='OtherCourses my-20 grid grid-cols-3 gap-4 px-28'>
+            <div className='OtherCourses my-20 grid grid-cols-3 gap-4 max-md:grid-cols-2 max-sm:grid-cols-1'>
                 {filteredCourses.map((course) => {
                     return (
-                        <div className='card max-[1300px]:w-px300 w-px400 h-px400 p-8 rounded-lg border-0  group hover:bg-sky-500 shadow-custom2'>
+                        <div className='card w-auto h-auto p-8 rounded-lg border-0  group hover:bg-sky-500 shadow-custom2'>
                             <div className='flex items-center justify-center w-full '>
                                 <img src={icon} width={250} height={250} />
                             </div>
@@ -73,7 +73,7 @@ export default function Index() {
                     )
                 }).slice(0, 6)}
             </div>
-        </>
+        </div>
     )
 }
 

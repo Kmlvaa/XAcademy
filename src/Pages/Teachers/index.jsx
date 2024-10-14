@@ -13,7 +13,7 @@ export default function index() {
       <div className='Course text-center mt-40 mb-16'>
         <p className='text-5xl font-bold'>Müəllimlərimiz</p>
       </div>
-      <div className='grid grid-cols-3 gap-5 justify-center px-24 py-10 max-[550px]:px-10 max-[1200px]:grid-cols-2 max-[850px]:grid-cols-1 items-center'>
+      <div className='grid grid-cols-3 gap-5 justify-center px-24 py-10 max-lg:px-10 max-[1200px]:grid-cols-2 max-md:grid-cols-1 items-center'>
         {Data?.map((item) => {
           return (
             <div className='max-[1400px]:w-auto  max-[1400px]:h-auto w-px400 h-px500 mb-10 rounded-md shadow-shadowCustom1 p-4'>

@@ -28,7 +28,7 @@ function Index() {
                         <button className='text-white border-0 py-2 px-5 mt-14 cursor-pointer text-base rounded-lg bg-logoBlue'>Kurslara keçid edin</button>
                     </div>
                 </div>
-                <div className="Hero-right flex flex-col justify-center p-12 mr-10 h-auto max-w-xl">
+                <div className="Hero-right flex flex-col justify-center p-12 mr-10 h-auto max-w-xl max-lg:!hidden">
                     <div className='Hero-right-upper flex flex-row items-end justify-end mb-2'>
                         <div className='upper-left w-40 h-40 mr-2 rounded-3xl bg-cubBlue'></div>
                         <div className='upper-right w-56 h-56 rounded-3xl bg-Blue'></div>
@@ -44,7 +44,7 @@ function Index() {
             </div>
             <div className='w-full h-0.5 bg-slate-100 my-16 shadow-md shadow-gray-500'></div>
             <CourseHome />
-            <div className="Courses px-28 mt-40">
+            <div className="Courses px-28 mt-40 max-lg:px-5">
                 <div className='mb-20 flex flex-row justify-between items-center'>
                     <div>
                         <p className='text-3xl flex flex-col'>Kurslarımızı kəşf et</p>
@@ -58,19 +58,22 @@ function Index() {
                         0: {
                             slidesPerView: 1,
                         },
-                        760: {
+                        450: {
                             slidesPerView: 1.5,
                         },
+                        760: {
+                            slidesPerView: 2.5,
+                        },
                         830: {
-                            slidesPerView: 1.7,
+                            slidesPerView: 2.7,
                             spaceBetween: 0,
                         },
                         950: {
-                            slidesPerView: 2,
+                            slidesPerView: 2.5,
                             spaceBetween: 0,
                         },
                         1010: {
-                            slidesPerView: 2.2,
+                            slidesPerView: 2.5,
                             spaceBetween: 0,
                         },
                         1300: {
@@ -78,8 +81,8 @@ function Index() {
                             spaceBetween: 0
                         },
                         1170: {
-                            slidesPerView: 2.7,
-                            spaceBetween: 0
+                            slidesPerView: 3,
+                            spaceBetween: 12
                         }
                     }}
                         freeMode={true}
@@ -111,7 +114,7 @@ function Index() {
                     </Swiper>
                 </div>
             </div>
-            <div className="Teachers px-28 mt-40">
+            <div className="Teachers px-28 mt-40 max-lg:px-5">
                 <div className='mb-20 flex flex-row justify-between items-center'>
                     <div>
                         <p className='text-3xl flex flex-col'>Müəllimlərimiz</p>
@@ -122,22 +125,25 @@ function Index() {
                 </div>
                 <div className='flex flex-row justify-center items-center'>
                     <Swiper breakpoints={{
-                        0: {
+                         0: {
                             slidesPerView: 1,
                         },
-                        760: {
+                        450: {
                             slidesPerView: 1.5,
                         },
+                        760: {
+                            slidesPerView: 2.5,
+                        },
                         830: {
-                            slidesPerView: 1.7,
+                            slidesPerView: 2.7,
                             spaceBetween: 0,
                         },
                         950: {
-                            slidesPerView: 2,
+                            slidesPerView: 2.5,
                             spaceBetween: 0,
                         },
                         1010: {
-                            slidesPerView: 2.2,
+                            slidesPerView: 2.5,
                             spaceBetween: 0,
                         },
                         1300: {
@@ -145,8 +151,8 @@ function Index() {
                             spaceBetween: 0
                         },
                         1170: {
-                            slidesPerView: 2.7,
-                            spaceBetween: 0
+                            slidesPerView: 3,
+                            spaceBetween: 12
                         }
                     }}
                         freeMode={true}

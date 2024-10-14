@@ -70,11 +70,11 @@ function Layout() {
                 </div>
             </div>
             <Outlet />
-            <div className="Layout-Footer flex flex-col justify-center w-full px-28 mt-40 max-[1200px]:px-5">
+            <div className="Layout-Footer flex flex-col justify-center w-full px-28 mt-20 max-[1200px]:px-5">
                 <div className="Logos flex flex-row justify-between w-full">
                     <div className="Header-left flex flex-row items-center font-semibold">
                         <img src={Logo} width={50} height={50} />
-                        <h1 className="text-3xl text-blue-600 max-w-md:hidden">Academy X</h1>
+                        <h1 className="text-3xl text-blue-600 max-w-md:hidden max-sm:hidden">Academy X</h1>
                     </div>
                     <div className="Footer-right flex flex-row items-center justify-evenly w-44">
                         <img src={Insta} width={30} height={30} className="hover:cursor-pointer" />
@@ -83,7 +83,7 @@ function Layout() {
                         <img src={Facebook} width={30} height={30} className="hover:cursor-pointer" />
                     </div>
                 </div>
-                <div className="List grid grid-cols-4 justify-between w-full mt-28 mb-20 max-md:grid-cols-2 max-sm:grid-cols-1">
+                <div className="List grid grid-cols-4 justify-between w-full mt-28 mb-20 max-md:grid-cols-2 max-sm:grid-cols-1 max-sm:text-center">
                     <div className="pl-2">
                         <p className="text-xl font-medium mb-4">Şirkət</p>
                         <ul>

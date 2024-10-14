@@ -28,7 +28,7 @@ export default function Index() {
         setShow4(!show4);
 
     return (
-        <div className='my-40 mx-28'>
+        <div className='my-20 mx-28'>
             <div className='flex flex-row items-center justify-between gap-4'>
                 <div className='w-px800'>
                     <h1 className='font-bold text-5xl mb-4'>Karyera</h1>

@@ -61,7 +61,8 @@ module.exports = {
       },
       boxShadow: {
         shadowCustom1: "rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px",
-        custom2: "-1px 1px 21px -1px rgba(0,0,0,0.3)"
+        custom2: "-1px 1px 21px -1px rgba(0,0,0,0.3)",
+        inset: "1px 1px 31px -15px rgba(0,0,0,0.76) inset",
       },
       backgroundImage: {
         custom1: "linear-gradient(90deg, rgba(2,0,.6,1) -10%, rgba(9,9,121,1) 40%, rgba(0,212,255,1) 120%)",
