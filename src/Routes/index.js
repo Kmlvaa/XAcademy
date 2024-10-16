@@ -14,6 +14,8 @@ import Login from '../Pages/Account/Login/Login'
 import Register from '../Pages/Account/Register/Index'
 import Karyera from '../Pages/Carier/Index'
 import Partners from '../Pages/Partners/Index'
+import Articles from '../Pages/Articles/Index'
+import ArticleInfo from '../Pages/ArticleInfo/Index'
 
 function index() {
     return (
@@ -37,6 +39,9 @@ function index() {
 
                 <Route path="/layout/karyera" element={<Karyera />}/>
                 <Route path="/layout/partners" element={<Partners />}/>
+                <Route path="/layout/articles" element={<Articles />}/>
+                <Route path="/layout/article/:id" element={<ArticleInfo />} />
+
             </Route>
         </Routes>
     );

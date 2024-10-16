@@ -28,9 +28,9 @@ export default function Index() {
         setShow4(!show4);
 
     return (
-        <div className='my-20 mx-28'>
-            <div className='flex flex-row items-center justify-between gap-4'>
-                <div className='w-px800'>
+        <div className='my-20 mx-28 max-lg:mx-5'>
+            <div className='flex flex-row items-center justify-between gap-4 max-md:!flex-col max-md:text-center'>
+                <div className='w-px800 max-md:w-auto'>
                     <h1 className='font-bold text-5xl mb-4'>Karyera</h1>
                     <p className='text-gray-500'>Academy X-də yaradılan Karyera Planlama Mərkəzi, məzunlarımızın potensiallarını gerçəkləşdirmələri və iş həyatına uğurla atılmaları üçün dəstək verən xüsusi bir bölmədir.</p>
                 </div>
@@ -102,7 +102,7 @@ export default function Index() {
                 </div>
             </div>
             <div className='mt-56'>
-                <div className='flex flex-row items-start mb-20 gap-10'>
+                <div className='flex flex-row items-start mb-20 gap-10 max-md:!flex-col max-md:text-center'>
                     <div>
                         <h1 className='font-bold text-4xl mb-5'>Müsahibəyə hazırlıq</h1>
                         <p className='text-gray-500'>İş müsahibələrinə hazırlıq prosesi, sınaq müsahibələri keçirməklə və strateji məsləhətlər təqdim etməklə tələbələrin öz bacarıqlarını artırmalarına kömək edir.</p>
@@ -111,21 +111,21 @@ export default function Index() {
                         <img src={coworker1} className='w-px1000 h-px400 rounded-xl'/>
                     </div>
                 </div>
-                <div className='flex flex-row items-start gap-10'>
+                <div className='flex flex-row items-start gap-10 max-md:!flex-col-reverse'>
                     <div>
                         <img src={coworker2} className='w-px1000 h-px400 rounded-xl'/>
                     </div>
-                    <div className='mr-10 text-end'>
+                    <div className='mr-10 text-end max-md:!text-center'>
                         <h1 className='font-bold text-4xl mb-5'>Müsahibəyə hazırlıq</h1>
                         <p className='text-gray-500'>Karyera planlaması, fərdin peşə məqsədlərini müəyyənləşdirərək, bacarıqlarını inkişaf etdirmək və uğur qazanmaq üçün strategiyalar hazırlama prosesidir.</p>
                     </div>
                 </div>
             </div>
-            <div className='mt-40 text-center mx-40'>
+            {/* <div className='mt-40 text-center mx-40'>
                 <div className='mb-20'>
                     <p className='font-semibold text-4xl'>Məzunlarımız</p>
                 </div>
-                <div className='grid grid-cols-6 items-center justify-items-center mb-14 gap-20 max-[1200px]:grid-cols-4'>
+                <div className='grid grid-cols-6 items-center justify-items-center mb-14 gap-10 max-lg:grid-cols-4'>
                     <img src={Mezun} className='w-px100 h-px100 rounded-full'/>
                     <img src={Mezun} className='w-px100 h-px100 rounded-full'/>
                     <img src={Mezun} className='w-px100 h-px100 rounded-full'/>
@@ -133,7 +133,7 @@ export default function Index() {
                     <img src={Mezun} className='w-px100 h-px100 rounded-full'/>
                     <img src={Mezun} className='w-px100 h-px100 rounded-full'/>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }

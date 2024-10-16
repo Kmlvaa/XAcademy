@@ -45,7 +45,7 @@ function Index() {
             <div className='w-full h-0.5 bg-slate-100 my-16 shadow-md shadow-gray-500'></div>
             <CourseHome />
             <div className="Courses px-28 mt-40 max-lg:px-5">
-                <div className='mb-20 flex flex-row justify-between items-center'>
+                <div className='mb-20 flex flex-row justify-between items-center max-sm:!flex-col max-sm:items-start'>
                     <div>
                         <p className='text-3xl flex flex-col'>Kurslarımızı kəşf et</p>
                     </div>
@@ -59,14 +59,14 @@ function Index() {
                             slidesPerView: 1,
                         },
                         450: {
-                            slidesPerView: 1.5,
+                            slidesPerView: 1.8,
                         },
                         760: {
-                            slidesPerView: 2.5,
+                            slidesPerView: 2.7,
                         },
                         830: {
-                            slidesPerView: 2.7,
-                            spaceBetween: 0,
+                            slidesPerView: 2.2,
+                            spaceBetween: 10,
                         },
                         950: {
                             slidesPerView: 2.5,
@@ -115,7 +115,7 @@ function Index() {
                 </div>
             </div>
             <div className="Teachers px-28 mt-40 max-lg:px-5">
-                <div className='mb-20 flex flex-row justify-between items-center'>
+                <div className='mb-20 flex flex-row justify-between items-center max-sm:!flex-col max-sm:items-start'>
                     <div>
                         <p className='text-3xl flex flex-col'>Müəllimlərimiz</p>
                     </div>
@@ -132,7 +132,7 @@ function Index() {
                             slidesPerView: 1.5,
                         },
                         760: {
-                            slidesPerView: 2.5,
+                            slidesPerView: 2.7,
                         },
                         830: {
                             slidesPerView: 2.7,

@@ -1,0 +1,9 @@
+
+
+.ArticleBanner{
+    background-image: url('../../Assets//meqale.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: sepia(10%) saturate(30%) contrast(70%);
+}
