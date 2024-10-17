@@ -7,25 +7,25 @@ import { ArrowRight } from 'react-bootstrap-icons';
 
 export default function Index() {
     return (
-        <>
+        <div className=''>
             <div className='ArticleBanner w-full h-px300 flex items-center justify-center cursor-pointer'>
                 <div className='flex flex-row items-center border-1 border-white pr-2 w-px500'>
                     <input placeholder='Search' className='bg-transparent p-3 w-full placeholder:text-white focus:outline-white' />
                     <img src={Search} className='w-10' />
                 </div>
             </div>
-            <div className='mx-28'>
+            <div className='mx-28 max-lg:mx-5'>
                 <div>
                     <p className='text-2xl font-semibold my-4'>Kateqoriyalar</p>
-                    <div className='flex flex-row gap-3'>
+                    <div className='flex flex-row gap-3 max-lg:flex-wrap'>
                         {categories?.map((cat) => {
                             return (
-                                <button className='p-3 bg-logoBlue text-white rounded-xl'>{cat.name}</button>
+                                <button className='py-2 px-3 bg-logoBlue text-white rounded-lg cursor-pointer'>{cat.name}</button>
                             );
                         })}
                     </div>
                 </div>
-                <div className='mt-10 grid grid-cols-3 gap-4'>
+                <div className='mt-10 grid grid-cols-3 gap-4 max-lg:!grid-cols-2 max-md:!grid-cols-1 items-center justify-center'>
                     {articles?.map((article) => {
                         return (
                             <Card maxW='sm'>
@@ -54,7 +54,7 @@ export default function Index() {
                     })}
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

@@ -59,7 +59,7 @@ function Layout() {
                 </div>
                 <div className="Header-right flex flex-row justify-center items-center max-lg:!hidden">
                     <div>
-                        <NavLink to='/layout/atricle' className="hover:text-Blue cursor-pointer mx-7 text-3x1">Məqalələr</NavLink>
+                        <NavLink to='/layout/articles' className="hover:text-Blue cursor-pointer mx-7 text-3x1">Məqalələr</NavLink>
                         <NavLink to='/layout/contact' className="hover:text-Blue cursor-pointer mx-7">Əlaqə</NavLink>
                         <NavLink to='/layout/about' className="hover:text-Blue cursor-pointer mx-7">Haqqımızda</NavLink>
                     </div>
