@@ -25,7 +25,7 @@ export default function Login() {
             <div className='max-lg:flex hidden relative -left-64 -top-48 z-10 max-sm:-left-48 max-sm:-top-52'>
                 <img src={respImage} className='max-sm:w-px100'/>
             </div>
-            <div className='shadow-custom2 p-10 w-px450 h-auto rounded-2xl mr-4 max-lg:absolute bg-LoginFormGray'>
+            <div className='shadow-custom2 p-10 w-px450 h-auto rounded-2xl mr-4 max-lg:absolute max-lg:bg-LoginFormGray'>
                 <div className='text-center'>
                     <h1 className='text-xl font-semibold'>Daxil ol</h1>
                     <div>
@@ -58,6 +58,7 @@ export default function Login() {
                         <Button><img src={apple} width={20} height={20} /></Button>
                     </div>
                     <div>
+                    
                         <NavLink to='/layout/account/register'><p>Hesabın yoxdur? <span className='text-logoBlue font-semibold text-sm cursor-pointer'>Qeydiyyatdan keç</span></p></NavLink>
                     </div>
                 </div>

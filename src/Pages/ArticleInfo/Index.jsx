@@ -4,21 +4,38 @@ import Imagex from '../../Assets/girl.jpeg'
 import { ArrowRight } from 'react-bootstrap-icons'
 import { Card, CardBody, CardFooter, Divider, Heading, Image, Stack, Text } from '@chakra-ui/react';
 import CardImage from '../../Assets/cardImage.jpeg'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/free-mode'
+import { Autoplay, FreeMode } from 'swiper/modules'
+import { NavLink, useParams } from 'react-router-dom';
 
 export default function Index() {
+
+    const params = useParams();
+
+    const details = articleInfo.filter(article =>
+        article.id == params.id
+    )
+
+    const otherArticles = articles.filter(article =>
+        article.id != params.id
+    )
+
     return (
-        <div className='mx-28 my-20 max-md:mx-5'>
+        <div className='mx-28 my-20 max-lg:mx-5'>
             <div className='flex flex-row items-center gap-4'>
                 <img src={Pin} className='w-10 h-10' />
-                <h1 className='font-bold text-2xl'>Dijital Marketinq Nədir və Faydaları Nələrdir?</h1>
+                <h1 className='font-bold text-2xl'>{details?.[0].Name} Nədir və Faydaları Nələrdir?</h1>
             </div>
             <div className='w-full h-0.5 bg-gray-300 my-10'></div>
             <div className='my-10 flex felx-row items-center justify-between'>
                 <div>
-                    <p>3 Sep. 2024</p>
+                    <p>{details?.[0].createDate}</p>
                 </div>
                 <div className='flex flex-row items-center gap-4'>
-                    <p>Admin</p>
+                    <p>{details?.[0].Creater}</p>
                     <img src={Imagex} className='w-16 h-16 rounded-full' />
                 </div>
             </div>
@@ -46,76 +63,160 @@ export default function Index() {
                     <div>
                         <h1>Bunlara da bax</h1>
                     </div>
-                    <div className='flex flex-row items-center gap-2'>
-                        <p className='cursor-pointer hover:text-logoBlue'>Daha çox</p>
-                        <ArrowRight />
-                    </div>
+                    <NavLink to='/layout/articles'>
+                        <div className='flex flex-row items-center gap-2'>
+                            <p className='cursor-pointer hover:text-logoBlue'>Daha çox</p>
+                            <ArrowRight />
+                        </div>
+                    </NavLink>
                 </div>
-                <div className='mt-10 grid grid-cols-3 gap-4 max-lg:!grid-cols-2 max-md:!grid-cols-1 items-center justify-center'>
-                    {articles?.map((article) => {
-                        return (
-                            <Card maxW='sm'>
-                                <CardBody>
-                                    <Image
-                                        src={CardImage}
-                                        borderRadius='lg'
-                                    />
-                                    <Stack mt='6' spacing='3'>
-                                        <Text className='flex flex-row items-center justify-between'>
-                                            <Text fontSize='md' color={'orange.600'}>{article.creator}</Text>
-                                            <Text fontSize='sm'>{article.date}</Text>
-                                        </Text>
-                                        <Text fontSize='xl' fontWeight={'semibold'} textDecoration={'underline'} cursor='pointer'>{article.category} haqqında bilməli olduğunuz əsas məlumatlar</Text>
-                                        <Text fontSize='sm'>{article.description}</Text>
-                                    </Stack>
-                                </CardBody>
-                                <CardFooter>
-                                    <Text fontSize='sm' className='flex flex-row items-center gap-2 text-logoBlue cursor-pointer'>
-                                        <Text>Daha çox</Text>
-                                        <ArrowRight />
-                                    </Text>
-                                </CardFooter>
-                            </Card>
-                        );
-                    }).slice(0, 3)}
+                <div className='mt-10 items-center justify-center'>
+                    <Swiper breakpoints={{
+                        0: {
+                            slidesPerView: 1,
+                        },
+                        450: {
+                            slidesPerView: 1.8,
+                        },
+                        760: {
+                            slidesPerView: 2,
+                        },
+                        830: {
+                            slidesPerView: 2,
+                            spaceBetween: 10,
+                        },
+                        950: {
+                            slidesPerView: 2.3,
+                            spaceBetween: 0,
+                        },
+                        1010: {
+                            slidesPerView: 2.5,
+                            spaceBetween: 0,
+                        },
+                        1300: {
+                            slidesPerView: 3,
+                            spaceBetween: 10
+                        },
+                        1170: {
+                            slidesPerView: 3,
+                            spaceBetween: 12
+                        }
+                    }}
+                        freeMode={true}
+                        autoplay={{
+                            delay: 2000,
+                            disableOnInteraction: false,
+                            pauseOnMouseEnter: true
+                        }}
+                        loop
+                        pagination={true}
+                        grabCursor={true}
+                        modules={[FreeMode, Autoplay]}
+                    >
+                        {otherArticles?.map((article) => {
+                            return (
+                                <SwiperSlide id={article.id}>
+                                    <Card maxW='sm'>
+                                        <CardBody>
+                                            <Stack className='relative'>
+                                                <button
+                                                    className='py-1 px-3 text-sm bg-logoBlue text-white rounded-md absolute bottom-0 m-2'>
+                                                    {article.category}
+                                                </button>
+                                                <Image
+                                                    src={CardImage}
+                                                    borderRadius='lg'
+                                                />
+                                            </Stack>
+                                            <Stack mt='6' spacing='3'>
+                                                <Text className='flex flex-row items-center justify-between'>
+                                                    <Text fontSize='md' color={'orange.600'}>{article.creator}</Text>
+                                                    <Text fontSize='sm'>{article.date}</Text>
+                                                </Text>
+                                                <NavLink to={`/layout/article/${article.id}`}>
+                                                    <Text fontSize='xl' fontWeight={'semibold'} textDecoration={'underline'} cursor='pointer'>{article.category} haqqında bilməli olduğunuz əsas məlumatlar</Text>
+                                                </NavLink>
+                                                <Text fontSize='sm'>{article.description}</Text>
+                                            </Stack>
+                                        </CardBody>
+                                        <CardFooter>
+                                            <NavLink to={`/layout/article/${article.id}`}>
+                                                <Text fontSize='sm' className='flex flex-row items-center gap-2 text-logoBlue cursor-pointer'>
+                                                    <Text>Daha çox</Text>
+                                                    <ArrowRight />
+                                                </Text>
+                                            </NavLink>
+                                        </CardFooter>
+                                    </Card>
+                                </SwiperSlide>
+                            );
+                        })}
+                    </Swiper>
                 </div>
             </div>
         </div>
     )
 }
 
+const articleInfo = [
+    {
+        id: 1,
+        createDate: "15 Sep 2023",
+        Creater: "Admin",
+        Name: "UX/UI DIzayn"
+    },
+    {
+        id: 2,
+        createDate: "2 Apr 1998",
+        Creater: "Admin",
+        Name: "Proqramming"
+    },
+    {
+        id: 3,
+        createDate: "28 Dec 2020",
+        Creater: "Admin",
+        Name: "Digital Marketinq"
+    },
+]
+
 const articles = [
     {
+        id: 1,
         creator: "admin",
         category: 'Ix Ui dizayn',
         date: '3 sep 2024',
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed delectus quas officia veritatis"
     },
     {
+        id: 2,
+        creator: "admin",
+        category: 'Programming',
+        date: '3 sep 2024',
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed delectus quas officia veritatis"
+    },
+    {
+        id: 3,
+        creator: "admin",
+        category: 'Digital Marketing',
+        date: '3 sep 2024',
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed delectus quas officia veritatis"
+    },
+    {
+        id: 4,
         creator: "admin",
         category: 'Ix Ui dizayn',
         date: '3 sep 2024',
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed delectus quas officia veritatis"
     },
     {
+        id: 5,
         creator: "admin",
         category: 'Ix Ui dizayn',
         date: '3 sep 2024',
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed delectus quas officia veritatis"
     },
     {
-        creator: "admin",
-        category: 'Ix Ui dizayn',
-        date: '3 sep 2024',
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed delectus quas officia veritatis"
-    },
-    {
-        creator: "admin",
-        category: 'Ix Ui dizayn',
-        date: '3 sep 2024',
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed delectus quas officia veritatis"
-    },
-    {
+        id: 6,
         creator: "admin",
         category: 'Ix Ui dizayn',
         date: '3 sep 2024',
