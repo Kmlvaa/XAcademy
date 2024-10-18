@@ -16,6 +16,7 @@ import Karyera from '../Pages/Carier/Index'
 import Partners from '../Pages/Partners/Index'
 import Articles from '../Pages/Articles/Index'
 import ArticleInfo from '../Pages/ArticleInfo/Index'
+import Slider from '../Pages/Slider/Index'
 
 function index() {
     return (
@@ -36,6 +37,7 @@ function index() {
                     <Route path="/layout/account/layout/passowordChange" element={<Password />} />
                 </Route>
                 <Route path="/layout/account/register" element={<Register />}/>
+                <Route path="/layout/slider" element={<Slider />}/>
 
                 <Route path="/layout/karyera" element={<Karyera />}/>
                 <Route path="/layout/partners" element={<Partners />}/>
